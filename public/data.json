@@ -1,0 +1,20 @@
+{
+    "balance": [
+        {
+            "id": 1,
+            "status": "En attente",
+            "transfer": {
+                "usd": 2,
+                "bitcoin": 0.00000102
+            }
+        },
+        {
+            "id": 2,
+            "status": "Disponible",
+            "transfer": {
+                "usd": 20,
+                "bitcoin": 0.00013102
+            }
+        }
+    ]
+}
