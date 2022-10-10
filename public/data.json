@@ -1,4 +1,34 @@
 {
+    "partners": [
+        {
+            "displayUrl": "https://www.jdsports.fr/",
+            "logoUrl": "https://ui2.awin.com/logos/7322/logo.gif",
+            "clickThroughUrl": "https://www.awin1.com/awclick.php?mid=7322&id=1110974",
+            "name": "JD Sports FR",
+            "category": "Sport"
+        },
+        {
+            "displayUrl": "https://www.sosh.fr/",
+            "logoUrl": "https://ui2.awin.com/logos/7320/logo.gif",
+            "clickThroughUrl": "https://www.awin1.com/awclick.php?mid=7322&id=1110974",
+            "name": "Sosh",
+            "category": "Mobile"
+        },
+        {
+            "displayUrl": "https://www.sosh.fr/",
+            "logoUrl": "https://ui2.awin.com/logos/7320/logo.gif",
+            "clickThroughUrl": "https://www.awin1.com/awclick.php?mid=7322&id=1110974",
+            "name": "Nike",
+            "category": "Mode"
+        },
+        {
+            "displayUrl": "https://www.sosh.fr/",
+            "logoUrl": "https://ui2.awin.com/logos/7320/logo.gif",
+            "clickThroughUrl": "https://www.awin1.com/awclick.php?mid=7322&id=1110974",
+            "name": "Puma",
+            "category": "Mode"
+        }
+    ],
     "balance": [
         {
             "id": 1,
@@ -15,6 +45,18 @@
                 "usd": 20,
                 "bitcoin": 0.00013102
             }
+        }
+    ],
+    "activities": [
+        {
+            "id": 1,
+            "earnings": 20,
+            "date": "10/10/2022"
+        },
+        {
+            "id": 2,
+            "earnings": 10,
+            "date": "10/10/2022"
         }
     ]
 }

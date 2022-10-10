@@ -1,34 +1,72 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom';
+import React from "react";
 
-import styled from 'styled-components'
+import styled from "styled-components";
 
-export default function Navbar() {
-    return (
-        <StyledNavbar>
-            <Menu>
-                <MenuItem>
-                    <MenuLink to="/">Balance</MenuLink>
-                </MenuItem>
-                <MenuItem>
-                    <MenuLink to="/">Activité</MenuLink>
-                </MenuItem>
-                <MenuItem>
-                    <MenuLink to="/">Transfer</MenuLink>
-                </MenuItem>
-            </Menu>
-            <Profile>
-                <Logout type="button">Déconnexion</Logout>
-                <ProfileAvatar src="https://xsgames.co/randomusers/avatar.php?g=male" alt="Profile" />
-            </Profile>
-        </StyledNavbar>
-    )
+import Profile from "./Profile.component";
+
+export default function Navbar({ currentSubPage, setCurrentSubPage }) {
+  return (
+    <StyledNavbar>
+      <Menu>
+        <MenuItem
+          page={currentSubPage}
+          name="balance"
+          onClick={() => setCurrentSubPage("balance")}>
+          Balance
+        </MenuItem>
+        <MenuItem page={currentSubPage} name="activity"
+          onClick={() => setCurrentSubPage("activity")}>
+          Activité
+        </MenuItem>
+        <MenuItem page={currentSubPage} name="transfer"
+          onClick={() => setCurrentSubPage("transfer")}>
+          Transfer
+        </MenuItem>
+      </Menu>
+      <Profile />
+    </StyledNavbar>
+  );
 }
 
-const StyledNavbar = styled.nav``;
-const Menu = styled.ul``;
-const MenuItem = styled.li``;
-const MenuLink = styled(NavLink)``;
-const Profile = styled.div``;
-const Logout = styled.button``;
-const ProfileAvatar = styled.img``
+const StyledNavbar = styled.nav`
+  padding: 0 20px;
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+`;
+const Menu = styled.ul`
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media screen and (min-width: 1024px) {
+    flex-direction: row;
+  }
+`;
+const MenuItem = styled.li`
+background-color: ${(props) =>
+    props.page === props.name ? "black" : "transparent"};
+color: ${(props) =>
+    props.page === props.name ? "white" : "black"};
+border: 2px solid black;
+border-radius: 10px;
+padding: 7px 0;
+width: 180px;
+display: block;
+text-align: center;
+font-weight: 600;
+font-family: inherit;
+transition: 0.2s;
+
+&:hover {
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: black;
+  color: white;
+}
+`;
